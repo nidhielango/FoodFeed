@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+    <div class="bg-image p-5 text-center rounded mb-5 text-white" style="background-image: url('https://www.bakingbusiness.com/ext/resources/2019/1/01142019/Ingredients2019.jpg?1547588432');">
+        <div class="container">
+            <h2>WELCOME TO FOODMATE</h2>
+            <p style="color: white;">Learn to cook new cuisines and travel from your own kitchen</p>
+            <p>
+                <a class="btn btn-dark btn-large text-center" href = "/recipes/new">Add Recipe</a>
+            </p>
+        </div>
+    </div>
+    <div class="row text-left">
+        <div class="col-lg-12">
+            <h3>Most popular recipes:</h3>
+            <br>
+        </div>
+    </div>
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        <% recipes.forEach(function(recipe){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail thumbnail-style">
+                    <img src="<%= recipe.image %>">
+                    <div class="caption">
+                        <h4><strong><%= recipe.name %></strong><h4>
+                    </div>
+                    <p>
+                        <a href="/recipes/<%= recipe._id %>" class = "btn btn-dark">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+<div>
+

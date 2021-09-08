@@ -1,0 +1,19 @@
+<!-- Template for comments -->
+<% include ../partials/header %>
+    <div class ="container">
+        <div class="row"></div>
+            <h1 style="text-align:center;">Comment on <%= recipe.name %></h1>
+            <div style="width:50%; margin:30px auto;">
+                <!-- POST REQUEST which will use the post route defined in app.js -->
+                <form action="/recipes/<%= recipe._id %>/comments" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="comment[text]" placeholder="text">
+                    </div>
+                    <div class="form-group">
+                        <button class = "btn btn-lg btn-dark btn-block">Submit!</button>
+                    </div>
+                    <a href="/recipes">View all Recipes</a>
+                </form>
+            </div>
+        </div> 
+    </div>

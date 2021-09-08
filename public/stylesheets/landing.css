@@ -1,0 +1,34 @@
+body {
+    background-image: url(recipe-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+h1{
+    padding-top:20%;
+    color: black;
+    font-size: 100px;
+}
+
+.btn-dark {
+    background-color: black;
+    border-color: #555555;
+    color: #FFFFFF;
+    outline: none !important;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark:active:focus,
+.btn-dark.active:focus {
+    color: #FFFFFF;
+    background-color: #3f3e3e;
+    outline: none !important;
+    border-color: #3f3e3e;
+}
+
+.fa-sign-in-alt {
+    font-size: 5px;
+}
